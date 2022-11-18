@@ -1,0 +1,63 @@
+namespace Program
+{
+class Aluno
+{
+private string nome;
+public string Nome { get => nome; set => nome = value; }
+private int matricula;
+public int Matricula { get => matricula; set => matricula = value; }
+private string email;
+public string Email { get => email; set => email = value; }
+
+public Aluno(string nome)
+{
+this.nome = nome;
+}
+
+public Aluno()
+{
+}
+
+public Aluno(string nome, int matricula, string email)
+{
+this.nome = nome;
+this.matricula = matricula;
+this.email = email;
+}
+
+public void imprimir()
+{
+Console.WriteLine(this.nome + " " + this.matricula + " " + this.email);
+}
+}
+}
+======================================================================
+namespace Program
+{
+class Program
+{
+static void Main(string[] args)
+{
+Aluno a1 = new Aluno();
+a1.Nome = "pele";
+a1.Matricula = 234;
+a1.Email = "ze@gmail.com";
+
+Aluno a2 = new Aluno();
+a2.Nome = "Ana";
+a2.Matricula = 789;
+a2.Email = "ana@xy.com";
+
+Aluno a3 = new Aluno();
+a3.Nome = "isaac";
+a3.Matricula = 989;
+a3.Email = "paulo@ig.com";
+
+a1.imprimir();
+a2.imprimir();
+a3.imprimir();
+
+Console.ReadKey();
+}
+}
+}
