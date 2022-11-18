@@ -1,0 +1,83 @@
+usando Sistema ;
+usando Sistema . Coleções ;
+usando Sistema . Coleções . Genérico ;
+usando Sistema . Linq ;
+usando Sistema . Texto ;
+usando Sistema . Rosqueamento . Tarefas ;
+namespace Aula7
+{
+programa de aula
+{
+static void Main ( string [] args )
+{
+Departamento d = novo Departamento ();
+d . nome = &quot; vendas &quot; ;
+d . adicionaFunc ( &quot; Maria &quot; , &quot; 6765657 &quot; , 123 );
+d . adicionaFunc ( &quot; Pedro &quot; , &quot; 2213438 &quot; , 789 );
+d . imprimeDepartamento ();
+Consola . ReadKey ();
+}
+}
+/////////////////////////////////////////////// _ ///////
+classe Funcionário
+{
+public Funcionario ( string nome , string cpf , int mat )
+{
+isso . nome = nome ;
+isso . cpf = cpf ;
+isso . matricula = mat ;
+}
+nome da string privada ;
+string privada cpf ;
+matrícula interna privada ;
+public void imprimeFuncionario ()
+{
+Consola . WriteLine ( este . nome + &quot; &quot; + este . cpf + &quot; &quot; + este . matricula );
+}
+
+public void setNome ( nome da string )
+{
+isso . nome = nome ;
+}
+public void setCpf ( string cpf )
+{
+isso . cpf = cpf ;
+}
+public void setNome ( int mat )
+{
+isso . matricula = mat ;
+}
+string pública getNome ()
+{
+devolva isso . nome ;
+}
+string pública getCpf ()
+{
+devolva isso . nome ;
+}
+public int getMat ()
+{
+devolva isso . matricula ;
+}
+}
+/////////////////////////////////////////////// _ ///////////////
+departamento de classe
+{
+nome da string pública ;
+ArrayList funcionarios = new ArrayList ();
+public void adicionaFunc ( string nome , string cpf , int mat )
+{
+Funcionario f = new Funcionario ( nome , cpf , mat );
+isso . funcionais . Adicionar ( f );
+}
+
+public void imprimeDepartamento ()
+{
+
+foreach ( Funcionario f in funcionalios )
+{
+f . imprimeFuncionario ();
+}
+}
+}
+}
