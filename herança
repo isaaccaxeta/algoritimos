@@ -1,0 +1,19 @@
+class Pessoa
+    {
+        private string nome;
+        private string cpf;
+        public Pessoa(string nome, string cpf)
+        {
+            this.nome = nome;
+            this.cpf = cpf;
+        }
+        public string getNome()
+        {
+            return this.nome;
+        }
+
+        public string getCpf()
+        {
+            return this.cpf;
+        }
+    }
